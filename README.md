@@ -14,6 +14,9 @@ Now, upon loading the page, the content will initially display placeholders inst
 
 The code files include detailed explanations of the process through **comments**.
 
+## Crucial points:
+- For a Suspense component to work properly, all of its content must rely on a promise.
+
 ## Deployment:
 To view the app on your computer, simply clone the repository and run:
 ```
