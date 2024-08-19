@@ -1,36 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Suspense
 
-## Getting Started
+## Purpose of the repo:
+The purpose of this repository is to quickly and easily learn how to use the **Suspense** utility from **React** in a **NextJS** environment.
 
-First, run the development server:
+## How it works:
+We have two components, each of which displays different data by fetching from an API. The first component (`src/components/Name.tsx`) takes 3 seconds to retrieve the data. The second one (`src/components/Height.tsx`) takes only 1 second.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Both are shown on the homepage (`src/app/page.tsx`), but to avoid the page waiting to render until both data are available, we display a skeleton as a placeholder until each fetch is completed. The skeletons of the first and second components are slightly different to highlight the distinction. The skeletons are defined in the `src/components/Skeleton.jsx` file, and were created with [Create React Content Loader](https://skeletonreact.com/).
+
+We achieve this with the help of **React's Suspense**.
+
+Now, upon loading the page, the content will initially display placeholders instead of the components. After one second, the lower placeholder will be replaced by the component, and two seconds later, the upper one will load, displaying a piece of data called **Name** and another called **Height**.
+
+The code files include detailed explanations of the process through **comments**.
+
+## Deployment:
+To view the app on your computer, simply clone the repository and run:
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+npm run dev
+```
