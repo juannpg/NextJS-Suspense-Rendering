@@ -18,7 +18,7 @@ The code files include detailed explanations of the process through **comments**
 - For a Suspense component to work properly, all of its content must rely on a promise.
 
 ## Deployment:
-To view the app on your computer, open this codesandbox: [https://vq245q-3000.csb.app/](https://vq245q-3000.csb.app/)
+To view the app, open this Code SandBox: [https://vq245q-3000.csb.app/](https://vq245q-3000.csb.app/)
 
 or simply clone the repository and run:
 ```
