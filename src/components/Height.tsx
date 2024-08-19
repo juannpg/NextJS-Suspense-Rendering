@@ -6,7 +6,7 @@ async function fetchData({url}:{url: string}) {
   const data = await response.json();
 
   // This simulates a long-running data fetch that lasts 1 second
-  await new Promise(resolve => setTimeout(resolve, 3000));
+  await new Promise(resolve => setTimeout(resolve, 1000));
 
   return data;
 }
